@@ -1,0 +1,819 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    border: 2px solid #e0e0e0; /* Light grey border color */
+    padding: 20px; /* Add padding inside the section */
+    margin: 20px 0; /* Space between sections */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f5f1; /* Light beige background color */
+    color: #3a3a3a; /* Dark text color for contrast */
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8); /* Slightly opaque dark grey */
+    padding: 15px 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+   
+
+/* Display the menu when the hamburger is clicked */
+.header-right.show {
+    display: flex;
+}
+
+.header a {
+    color: #f1f1f1;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: #6b8e23; /* Olive green on hover */
+    color: #f1f1f1;
+}
+
+.header a.active {
+    background-color: #ffcc00; /* Sunflower yellow */
+    color: #3a3a3a;
+}
+
+.header-right {
+    display: flex;
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-right {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #ffcc00;
+    color: #3a3a3a;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+
+/* Content Section */
+.content {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px auto; /* Center content section */
+    max-width: 800px; /* Max width for consistency */
+}
+
+/* About Us Section */
+#about-us {
+    background-color: #f8f8f8; /* Light grey background */
+    padding: 60px 20px; /* Padding for spacing */
+    text-align: center;
+}
+
+#about-us h2 {
+    font-size: 2.5em; /* Larger font size for the heading */
+    font-weight: bold; /* Bold font weight */
+    color: #333; /* Dark grey color */
+    margin-bottom: 40px; /* Margin below the heading */
+}
+
+.about-us-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px; /* Space between elements */
+}
+
+.about-us-wrapper > div {
+    background-color: #fff; /* White background for each section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    max-width: 300px; /* Limit width of each section */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.about-us-wrapper > div:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.about-us-wrapper img {
+    width: 100%; /* Make images responsive */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below images */
+}
+
+.about-us-wrapper h3 {
+    font-size: 1.5em; /* Font size for subheadings */
+    color: #333; /* Dark grey color */
+    margin-bottom: 15px; /* Space below subheadings */
+}
+
+.about-us-wrapper p {
+    font-size: 1em; /* Regular font size for paragraphs */
+    color: #666; /* Lighter grey for text */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.about-us-wrapper .btn-primary {
+    display: inline-block;
+    background-color: #ffcc00; /* Sunflower yellow background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Font size for button */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.about-us-wrapper .btn-primary:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+@media (max-width: 768px) {
+    .about-us-wrapper {
+        flex-direction: column; /* Stack elements on smaller screens */
+        align-items: center;
+    }
+
+    .about-us-wrapper > div {
+        max-width: 100%; /* Full width for each section */
+    }
+}
+
+/* Products Section */
+.products-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%;
+    gap: 20px; /* Space between items */
+}
+
+.product {
+    background-color: transparent; /* Remove card background */
+    border-radius: 0; /* Remove card border radius */
+    padding: 10px; /* Adjust padding */
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width of the product */
+    margin: 10px 0; /* Vertical spacing */
+}
+
+.product img {
+    border-radius: 50%; /* Make images rounded */
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Thickness of the line */
+    background: #e0e0e0; /* Color of the line */
+    margin: 20px auto; /* Center and space around the line */
+    width: 90%; /* Extend the line width */
+}
+
+/* Testimonials Section */
+.testimonials-wrapper {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff; /* Match content background color */
+    margin: 10px auto; /* Center and space out sections */
+    border-radius: 8px;
+    max-width: 800px; /* Maximum width for consistency */
+}
+
+.testimonial {
+    border-radius: 8px;
+    margin: 10px auto; /* Center and space out testimonials */
+}
+
+.testimonials-wrapper, .contact {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff; /* Match content background color */
+    margin: 10px auto; /* Center and space out sections */
+    border-radius: 8px;
+    max-width: 800px; /* Maximum width for consistency */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333333;
+    color: #f1f1f1;
+    padding: 20px;
+    margin: 10px auto; /* Center and space out footer */
+    max-width: 1200px; /* Maximum width of the footer */
+    text-align: center;
+}
+
+.footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Full Height Contact Page */
+.contact-page {
+    height: 100vh; /* Full viewport height */
+    overflow: auto; /* Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #f0f5f1; /* Light beige background color, matching home page */
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff; /* White background for contact section */
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for visual depth */
+    margin-top: 80px;
+}
+
+/* Contact Form Styles */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact form .button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Apply consistent button styles */
+.contact form .btn-primary,
+.contact form .btn-back {
+    color: #ffcc00  !important; /* Dark grey color */
+    font-size: 1.25em !important; /* Larger font size for prominence */
+    font-weight: 600 !important; /* Semi-bold font weight */
+    display: inline-block;
+    text-decoration: none !important;
+    border-radius: 5px !important; /* Rounded corners for a modern look */
+    padding: 10px 20px !important; /* Consistent padding for spacing */
+    background-color: #fff !important; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+    min-width: 150px; /* Ensure minimum width for consistency */
+    text-align: center; /* Center text */
+}
+
+/* Hover effect */
+.contact form .btn-primary:hover,
+.contact form .btn-back:hover {
+    background-color: #e6b800; /* Slightly darker yellow */
+    transform: scale(1.05); /* Scale effect */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Specific button styles */
+.contact form .btn-primary {
+    background-color: #ffcc00 !important; /* Sunflower yellow */
+    color: #333 !important; /* Dark grey text */
+}
+
+.contact form .btn-back {
+    background-color: #ffcc00  !important; /* Dark grey */
+    color: #ffffff !important; /* White text */
+}
+
+.contact form .btn-back:hover {
+    background-color: #e6b800 !important; /* Slightly darker grey */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Input and Textarea Styles */
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #3a3a3a; /* Dark text color for inputs */
+}
+
+/* Header Styles */
+.contact h2 {
+    font-size: 2.5em; /* Adjust size for headers */
+    font-weight: bold;
+    color: #333333; /* Dark grey color */
+    text-transform: uppercase;
+    margin: 20px 0; /* Uniform vertical spacing */
+}
+
+.contact h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00; /* Sunflower yellow */
+    margin: 20px auto; /* Center the border and add margin */
+}
+
+/* Modern Phone Number Styling */
+.contact-phone {
+    color: #ffcc00 !important; /* Dark grey color */
+    font-size: 1.25em !important; /* Larger font size for prominence */
+    font-weight: 600 !important; /* Semi-bold font weight */
+    display: inline-block;
+    margin-bottom: 20px !important; /* Space between phone number and other elements */
+    text-decoration: none !important;
+    border-radius: 5px !important; /* Rounded corners for a modern look */
+    padding: 10px !important; /* Padding for spacing */
+    background-color: #f9f9f9 !important; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* Phone number hover effect */
+.contact-phone:hover {
+    background-color: #ffcc00 !important; /* Sunflower yellow */
+    color: #ffffff !important; /* White text */
+    text-decoration: none !important; /* Remove underline on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Paragraph Styles */
+.contact p {
+    margin-bottom: 20px !important; /* Space below paragraphs */
+    padding-bottom: 20px !important; /* Padding for extra space */
+}
+
+/* Remove any default styling from buttons */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    color: inherit;
+}
+
+
+/* Contact Form Styling */
+form[name="contact"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form[name="contact"] p {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form[name="contact"] label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form[name="contact"] input[type="text"],
+form[name="contact"] input[type="email"],
+form[name="contact"] textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+form[name="contact"] input[type="text"]:focus,
+form[name="contact"] input[type="email"]:focus,
+form[name="contact"] textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+form[name="contact"] textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form[name="contact"] .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #3a3a3a;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form[name="contact"] .btn-primary:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+form button.btn-primary:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Common Header Styling for Testimonials, Footer, and Contact */
+.testimonial h2, .footer h2 {
+    font-size: 2.5em; /* Adjust size for headers */
+    font-weight: bold;
+    color: #333333; /* Dark grey color */
+    text-transform: uppercase;
+    margin: 20px 0; /* Uniform vertical spacing */
+}
+
+.testimonial h2::after, .footer h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00; /* Sunflower yellow */
+    margin: 20px auto; /* Center the border and add margin */
+}
+
+.contact h2, .testimonial h2, .footer h2 {
+    font-size: 2.5em; /* Adjust size for headers */
+    font-weight: bold;
+    color: #333333; /* Dark grey color */
+    text-transform: uppercase;
+    margin: 20px 0; /* Uniform vertical spacing */
+}
+
+.contact h2::after, .testimonial h2::after, .footer h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00; /* Sunflower yellow */
+    margin: 20px auto; /* Center the border and add margin */
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Style for <h2> to make the underline wider */
+h2 {
+    position: relative; /* For positioning the pseudo-element */
+    display: inline-block; /* Ensure the <h2> only takes up as much width as its content */
+    padding-bottom: 10px; /* Space between text and underline */
+}
+
+/* Use ::before to create a wider underline */
+h2::before {
+    content: "";
+    position: absolute;
+    left: -20px; /* Adjust to extend left */
+    bottom: 0; /* Align to the bottom of the <h2> */
+    width: calc(100% + px); /* Adjust to extend right */
+    height: 4px; /* Thickness of the underline */
+    background-color: yellow; /* Color of the underline */
+    z-index: -1; /* Place behind the text */
+}
+
+/* Specific section styling for h2 tags */
+#features h2, #products h2, #testimonials h2, #contact h2 {
+    font-size: 2.5em; /* Uniform size for headers in these sections */
+    font-weight: bold;
+    color: #333333; /* Dark grey color */
+    text-transform: uppercase;
+    margin: 20px 0; /* Consistent margin */
+}
+
+#features h2::after, #products h2::after, #testimonials h2::after, #contact h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00; /* Sunflower yellow */
+    margin: 20px auto; /* Center the border and add margin */
+}
+
+/* Specific styling for testimonials and footer */
+.testimonials-wrapper h2, .footer h2 {
+    font-size: 2.5em; /* Uniform size for headers in these sections */
+    font-weight: bold;
+    color: #333333; /* Dark grey color */
+    text-transform: uppercase;
+    margin: 20px 0; /* Consistent margin */
+}
+
+.testimonials-wrapper h2::after, .footer h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00; /* Sunflower yellow */
+    margin: 20px auto; /* Center the border and add margin */
+}
+
+
+.products-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.products-header {
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+
+.products-header h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333333; /* Dark grey color */
+    text-transform: uppercase;
+}
+
+.products-header p {
+    font-size: 1.2em;
+    color: #666666; /* Lighter grey for description */
+}
+
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five columns */
+    gap: 20px; /* Space between products */
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-item p {
+    margin: 10px 0;
+}
+
+.product-item .price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product-item .btn-primary {
+    background-color: #ffcc00;
+    color: #3a3a3a;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-item .btn-primary:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .products-list {
+        grid-template-columns: repeat(4, 1fr); /* Four columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .products-list {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .products-list {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-item {
+    animation: fadeInUp 1s ease-out;
+}
+
+.quick-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.quick-view-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+}
+
+#quick-view-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.close-view {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #3a3a3a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #ffcc00;
+    color: #3a3a3a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DroneSpray</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">DroneSpray</a>
+        <div class="header-right">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a class="active" href="contact.html">Contact</a>
+        </div>
+    </header>
+
+        <!-- Contact Section -->
+    <section id="contact" class="contact-page">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>If you need immediate assistance, please call us at:</p>
+                <a href="tel:+1234567890" class="contact-phone">+1 (234) 567-890</a>
+            </div>
+            <form name="contact" method="POST" data-netlify="true">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name here...">
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email here...">
+                </p>
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required placeholder="Enter any additional information here..."></textarea>
+                </p>
+                <div class="button-container">
+                    <button type="submit" class="btn-primary">Send</button>
+                    <a href="/" class="btn-back">Back to Home Page</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
