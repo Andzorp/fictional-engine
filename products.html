@@ -1,227 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - DroneSpray</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Navbar with Video Hero</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Google Fonts -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    </head>    
 <body>
-    <header class="header">
-        <a href="#home" class="logo">DroneSpray</a>
-        <div class="header-right">
-            <a href="index.html">Home</a>
-            <a class="active" href="products">Products</a>
-            <a href="contact.html">Contact</a>
-        </div>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">YourLogo</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-        <!-- Products Page -->
-    <section id="products" class="products-container">
-        <div class="products-header">
-            <h2>Our Products</h2>
-            <p>Browse our range of products below.</p>
-        </div>
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Explore our range of high-quality products. Click on "Quick View" for more details.</p>
 
-        <!-- Quick View Modal -->
-        <div id="quick-view" class="quick-view">
-            <div class="quick-view-content">
-                <!-- Content will be populated dynamically -->
-                <div id="quick-view-details">
-                    <img src="" alt="" id="quick-view-image">
-                    <h3 id="quick-view-title"></h3>
-                    <p id="quick-view-description"></p>
-                    <p class="price" id="quick-view-price"></p>
-                    <button class="btn-primary" id="quick-view-buy">Buy Now</button>
+            <div class="product-list">
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
+                </div>                
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
                 </div>
-                <button class="close-view">Close</button>
-            </div>
-        </div>
-
-    
-            
-                <!-- Products Section -->
-    <section id="products" class="products-container">
-        <!-- Drone Type/Brand 1 -->
-        <div class="product-category" id="category1">
-            <h2>Drone Type/Brand 1</h2>
-            <div class="products-list">
-                <!-- Product Item -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
+                </div>                
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
                 </div>
-                <!-- Repeat for each product in this category -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                data-title="Drone Model 1" 
-                data-description="Short description of Drone Model 1." 
-                data-price="$XXX.XX" 
-                data-image="images/drone1.jpg">
-                <img src="images/drone1.jpg" alt="Drone Model 1">
-                <h3>Drone Model 1</h3>
-                <p>Short description of Drone Model 1.</p>
-                <p class="price">$XXX.XX</p>
-                <a href="#" class="btn-primary">View Details</a>
-            </div>
-            <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
+                </div>                
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="products" class="products-container">
-        <!-- Drone Type/Brand 1 -->
-        <div class="product-category" id="category1">
-            <h2>Drone Type/Brand 1</h2>
-            <div class="products-list">
-                <!-- Product Item -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
+                </div>                
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
                 </div>
-                <!-- Repeat for each product in this category -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                data-title="Drone Model 1" 
-                data-description="Short description of Drone Model 1." 
-                data-price="$XXX.XX" 
-                data-image="images/drone1.jpg">
-                <img src="images/drone1.jpg" alt="Drone Model 1">
-                <h3>Drone Model 1</h3>
-                <p>Short description of Drone Model 1.</p>
-                <p class="price">$XXX.XX</p>
-                <a href="#" class="btn-primary">View Details</a>
-            </div>
-            <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
+                </div>                
+                <div class="product-card" data-product="1" data-image="images/file.png">
+                    <img src="images/file.png" alt="Product 1">
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>Brief description of Product 1.</p>
+                        <button class="btn view-details" data-product="1">Quick View</button>
+                    </div>
                 </div>
+                <!-- Add more product cards as needed -->
             </div>
         </div>
     </section>
 
-    <section id="products" class="products-container">
-        <!-- Drone Type/Brand 1 -->
-        <div class="product-category" id="category1">
-            <h2>Drone Type/Brand 1</h2>
-            <div class="products-list">
-                <!-- Product Item -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
-                </div>
-                <!-- Repeat for each product in this category -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                data-title="Drone Model 1" 
-                data-description="Short description of Drone Model 1." 
-                data-price="$XXX.XX" 
-                data-image="images/drone1.jpg">
-                <img src="images/drone1.jpg" alt="Drone Model 1">
-                <h3>Drone Model 1</h3>
-                <p>Short description of Drone Model 1.</p>
-                <p class="price">$XXX.XX</p>
-                <a href="#" class="btn-primary">View Details</a>
-            </div>
-            <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
-                </div>
-            </div>
+    <!-- Modal Structure -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Product Title</h2>
+            <img id="modal-image" src="" alt="Product Image">
+            <p id="modal-description">Product Description</p>
         </div>
-    </section>
+    </div>
 
-    <section id="products" class="products-container">
-        <!-- Drone Type/Brand 1 -->
-        <div class="product-category" id="category1">
-            <h2>Drone Type/Brand 1</h2>
-            <div class="products-list">
-                <!-- Product Item -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
-                </div>
-                <!-- Repeat for each product in this category -->
-                <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                data-title="Drone Model 1" 
-                data-description="Short description of Drone Model 1." 
-                data-price="$XXX.XX" 
-                data-image="images/drone1.jpg">
-                <img src="images/drone1.jpg" alt="Drone Model 1">
-                <h3>Drone Model 1</h3>
-                <p>Short description of Drone Model 1.</p>
-                <p class="price">$XXX.XX</p>
-                <a href="#" class="btn-primary">View Details</a>
-            </div>
-            <div class="product-item" data-aos="fade-up" data-aos-duration="1000"
-                    data-title="Drone Model 1" 
-                    data-description="Short description of Drone Model 1." 
-                    data-price="$XXX.XX" 
-                    data-image="images/drone1.jpg">
-                    <img src="images/drone1.jpg" alt="Drone Model 1">
-                    <h3>Drone Model 1</h3>
-                    <p>Short description of Drone Model 1.</p>
-                    <p class="price">$XXX.XX</p>
-                    <a href="#" class="btn-primary">View Details</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="modal.js"></script>
+    <script src="hamburger-menu.js"></script>
 </body>
 </html>
